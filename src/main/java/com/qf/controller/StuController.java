@@ -20,6 +20,7 @@ public class StuController {
     public String setStudents(Model model){
 
         List<StudentEntity> stulist = stuService.list();
+
         model.addAttribute("stulist",stulist);
         return "stulist";
     }
