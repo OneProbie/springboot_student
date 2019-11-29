@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>学生列表</title>
+</head>
+<body>
+<a href="/user/addskip">添加</a>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>名字</th>
+        <th>密码</th>
+        <th>年龄</th>
+        <th>操作</th>
+    </tr>
+
+    <tr th:each="stu : ${stulist}">
+        <td th:text="${stu.id}"></td>
+        <td th:text="${stu.name}"></td>
+        <td th:text="${stu.password}"></td>
+        <td th:text="${stu.age}"></td>
+        <td><a th:href="|/user/delstu?id=${stu.id}|">删除</a>
+            <a th:href="|/user/updskip?id=${stu.id}|">修改</a></td>
+    </tr>
+</table>
+
+</body>
+</html>

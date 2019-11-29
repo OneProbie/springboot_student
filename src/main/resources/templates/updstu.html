@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>修改页面</title>
+</head>
+<body>
+<form action="/user/updstu" method="post">
+    <input type="hidden" name="id" th:value="${stu.id}">
+    <table>
+        <tr>
+            <td>姓名:</td>
+            <td><input type="text" name="name" th:value="${stu.name}"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" name="password" th:value="${stu.password}"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>年龄:</td>
+            <td><input type="number" name="age" th:value="${stu.age}"></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="修改"></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
